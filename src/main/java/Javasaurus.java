@@ -4,6 +4,7 @@ public class Javasaurus extends Kaiju implements IMove {
 
     public Javasaurus(String name, int healthValue, int attackValue) {
         super(name, healthValue, attackValue);
+        this.tank = tank;
     }
 
     public String roar() {

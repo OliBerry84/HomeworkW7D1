@@ -11,8 +11,8 @@ public class JavasaurusTest {
     @Before
     public void before(){
         javasaurus = new Javasaurus("Javasaurus", 5000, 100);
-        tank = new Tank("K2 Black Panther", 10000);
-        helicopter = new Helicopter("Mi-24 Hind", 3000);
+        tank = new Tank("K2 Black Panther", 10000, 250);
+        helicopter = new Helicopter("Mi-24 Hind",  3000, 150);
     }
 
     @Test
@@ -40,10 +40,15 @@ public class JavasaurusTest {
         assertEquals("Javasaurus tramples some american tourists on his way down the street", javasaurus.move("tramples some american tourists on his way down the street"));
     }
 
-//    @Test
-//    public void javasaurusCanAttack() {
-//        javasaurus.attack(tank);
-//        assertEquals(9900, tank.getHealthValue());
-//    }
+    @Test
+    public void javaAttack(){
+        javasaurus.attack(tank);
+        assertEquals(9900, tank.getHealthValue());
+    }
 
+    @Test
+    public void javaTakeDamage(){
+        tank.attack(javasaurus);
+        assertEquals(4750, javasaurus.getHealthValue());
+    }
 }

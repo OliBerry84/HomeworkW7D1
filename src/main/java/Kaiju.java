@@ -1,4 +1,4 @@
-public abstract class Kaiju {
+public abstract class Kaiju implements IDamage, IAttack {
 
     private String name;
     private int healthValue;
@@ -20,6 +20,16 @@ public abstract class Kaiju {
 
     public int getAttackValue(){
         return attackValue;
+    }
+
+    @Override
+    public void damage(int damage){
+        healthValue -= damage;
+    }
+
+    @Override
+    public void attack(IDamage object){
+        object.damage(attackValue);
     }
 
 }

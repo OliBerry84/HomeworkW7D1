@@ -9,7 +9,7 @@ public class HelicopterTest {
 
         @Before
         public void before(){
-            helicopter = new Helicopter("Mi-24 Hind", 3000);
+            helicopter = new Helicopter("Mi-24 Hind", 3000, 150);
         }
 
         @Test

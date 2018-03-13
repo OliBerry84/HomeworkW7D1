@@ -9,7 +9,7 @@ public class TankTest {
 
     @Before
     public void before(){
-        tank = new Tank("K2 Black Panther", 10000);
+        tank = new Tank("K2 Black Panther", 10000, 250);
     }
 
     @Test
